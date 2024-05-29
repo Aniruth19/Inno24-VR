@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "843393192159",
+    "project_id": "vrapp-edbfe",
+    "storage_bucket": "vrapp-edbfe.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:843393192159:android:735c2929ed49543720d96a",
+        "android_client_info": {
+          "package_name": "com.virostarterkit"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "843393192159-ifnoslsco40mr6aqujrhpggd6iouqint.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.virostarterkit",
+            "certificate_hash": "5e8f16062ea3cd2c4a0d547876baa6f38cabf625"
+          }
+        },
+        {
+          "client_id": "843393192159-jvp9n1qop3jf4l5te81t3aq78b7tep76.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDKH8XjthB-8-D336P39RHjC9tM6XIxKjk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "843393192159-jvp9n1qop3jf4l5te81t3aq78b7tep76.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

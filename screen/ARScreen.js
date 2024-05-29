@@ -11,7 +11,7 @@ import {
 const InitialScene = ({ modelSource }) => {
   const [rotation, setRotation] = useState([-45, 50, 40]);
   const [position, setPosition] = useState([0, 0, -5]);
-  const [skullScale, setSkullScale] = useState([0.02, 0.02, 0.02]); // Adjusted scale
+  const [skullScale, setSkullScale] = useState([0.09, 0.09, 0.09]); // Adjusted scale
 
   ViroAnimations.registerAnimations({
     rotate: {
@@ -62,7 +62,7 @@ const InitialScene = ({ modelSource }) => {
 };
 
 export default ({ route }) => {
-  const { modelSource } = route.params; // Extract modelSource from route params
+  const { modelSource } = route.params; 
   return (
     <View style={styles.mainView}>
       <ViroARSceneNavigator

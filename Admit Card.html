@@ -1,0 +1,855 @@
+
+<!-- saved from url=(0054)https://finalmdmsmchserver4.aiimsexams.ac.in/AdmitCard -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"></head><body id="bWrapper" style="display: block;"><input type="hidden" id="hdnSId" value="0">
+
+
+
+        <script type="text/javascript">
+        var currentControllerName = 'AdmitCard';
+        var appPath = '';
+
+        window.history.forward();
+        function preventBack() { window.history.forward(1); }
+        </script>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta http-equiv="Page-Exit" content="Alpha(opacity=100)">
+
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+
+    <meta content="BlendTrans(Duration=0.1)" http-equiv="Page-Exit">
+    
+    
+    <meta name="viewport" content="width=device-width">
+    <title>Admit Card</title>
+
+    <script type="text/javascript" src="./Admit Card_files/jquery-1.11.3.min.js.download"></script>
+    <script type="text/javascript" src="./Admit Card_files/jquery-migrate-1.2.1.min.js.download"></script>
+    <script type="text/javascript" src="./Admit Card_files/overlayext.js.download"></script>
+    <script type="text/javascript" src="./Admit Card_files/jquery.transition.js.download"></script>
+    <script type="text/javascript" src="./Admit Card_files/jquery.alerts.js.download"></script>
+    <script type="text/javascript" src="./Admit Card_files/admitcard.js.download"></script>
+
+    <link rel="stylesheet" type="text/css" href="./Admit Card_files/jquery.alerts.css">
+    <link rel="stylesheet" type="text/css" href="./Admit Card_files/admitcard.css">
+    <style>
+
+        @page {
+            size: A4;
+            margin: 2mm 2mm 2mm 2mm;
+        }
+
+
+        @media print {
+            input::placeholder {
+                color: gray;
+                opacity: 0.4;
+            }
+
+            input {
+                border: 1px solid #000;
+            }
+
+            ::placeholder {
+                font-size: 12px !important;
+                text-align: center;
+            }
+        }
+
+
+        input::placeholder {
+            color: gray;
+            opacity: 0.4;
+        }
+
+        ::placeholder {
+            font-size: 12px !important;
+            text-align: center;
+        }
+
+        .right_WatermartImage2016 {
+            position: absolute;
+            top: 27%;
+            right: 14%;
+            z-index: 2;
+        }
+
+        #divOPHPoupup {
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 9999;
+            background: rgba(0,0,0,0.43);
+        }
+
+        .OPHPoupup {
+            width: 541px;
+            height: 268px;
+            border: 1px solid;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 9999;
+            background: #fff;
+            border: 1px solid;
+            margin: auto;
+            padding: 30px;
+            line-height: 20px;
+            border-radius: 10px;
+        }
+
+            .OPHPoupup .okBtn {
+                padding: 7px 30px;
+                height: auto;
+                background: -webkit-gradient(linear,0 0,0 100%,from(#3c8bcc),to(#2b6eaf));
+                background: -webkit-linear-gradient(top,#3c8bcc,#2b6eaf);
+                background: -moz-linear-gradient(top,#3c8bcc,#2b6eaf);
+                background: -ms-linear-gradient(top,#3c8bcc,#2b6eaf);
+                background: -o-linear-gradient(top,#3c8bcc,#2b6eaf);
+                border: 1px solid #1e64a0;
+                color: #fff;
+                font-size: 14px;
+            }
+
+        #divUnderPrivilegedPopUp {
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 9999;
+            background: rgba(0,0,0,0.43);
+            display: none;
+        }
+
+        .paperWidgetBox {
+        }
+
+            .paperWidgetBox input {
+                width: 24% !important;
+                margin-right: 5px !important;
+            }
+
+        .close {
+            background: #c00e0e;
+            border: 1px solid;
+            position: absolute;
+            right: 8px;
+            top: 3px;
+            color: #fff;
+            border-radius: 3px;
+            padding: 3px;
+            width: 21px;
+            height: 18px;
+            text-align: center;
+            padding: 2px;
+            cursor: pointer;
+        }
+
+        .signature {
+            position: relative;
+            bottom: -7px;
+            left: 68%;
+            font-size: 12px;
+            border-top: 1px solid #3a3a3a;
+            padding-top: 8px;
+            width: 235px;
+            text-align: right;
+        }
+
+        .decl {
+            font-size: 15px;
+            line-height: normal;
+            text-align: justify;
+            font-family: serif;
+            margin-top: 0px;
+        }
+
+        .lbbold td {
+            font-weight: 900;
+        }
+    </style>
+
+
+
+
+    <div style="width: 900px; overflow: hidden; margin: auto; position: relative; border: 2px solid rgb(41, 106, 171); padding: 0px 3px; display: block;" id="dvAccepted">
+
+
+        <div class="waterImg">
+            
+            <img style="width: 101%; opacity: 0.6; height: 1250px;" id="imgWatermark" src="./Admit Card_files/slot1_watermarkImage.jpg">
+        </div>
+        <div id="dvImg2016" class="right_WatermartImage2016">
+            <img id="imgSlot" src="./Admit Card_files/2019_new_image.png" style=" width: 46px;">
+        </div>
+        <div id="dvImgWatermart" class="right_smallWatermartAiimsImage">
+            <img src="./Admit Card_files/Picture1.png">
+        </div>
+        <div class="print_back">
+            <input id="btnPrint" name="button" onclick="window.print();" type="button" value="Print" class="printBtn">
+            <div style="float: right; width: 135px; margin-top:3px;">
+                <a href="https://finalmdmsmchserver4.aiimsexams.ac.in/DashBoard" style="text-decoration: none; color: #fff; padding: 1px 4px; height: 16px; font-size: 15px;" class="printBtn">My Page </a>
+                <a href="https://finalmdmsmchserver4.aiimsexams.ac.in/Logout" style="text-decoration: none; color: #fff; padding: 1px 4px; height: 16px; font-size: 15px;" class="printBtn">Logout</a>
+            </div>
+        </div>
+
+
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+            <tbody><tr>
+                <td>
+                    <table width="100%" cellspacing="0" cellpadding="0" style="border-collapse: collapse">
+                        <tbody><tr style="background: #fff;">
+                            <td colspan="3">
+                                <table width="100%" border="0" cellspacing="1" cellpadding="1">
+                                    <tbody><tr>
+                                        <td width="15%" height="30">IP Address:</td>
+                                        <td width="20%">
+                                            <span id="lblIPAddressNur" style="margin-left: -35px;">49.47.219.16</span>
+                                            
+                                        </td>
+                                        <td width="7%">Date:</td>
+                                        <td width="29%">
+                                            <span style="margin-left: -17px;">Monday, May 13, 2024</span>
+                                        </td>
+                                        <td width="5%">Time: </td>
+                                        <td width="24%">
+                                            <span>6:42:40 PM</span>
+                                        </td>
+                                    </tr>
+                                </tbody></table>
+                            </td>
+                        </tr>
+                        <tr style="background-color: rgba(255, 245, 245, 0.7); border: 2px solid #4f81bd;">
+                            <td width="10%" style="text-align: center">
+                                <img src="./Admit Card_files/AdminCardLogo.PNG" style="height: 75px;">
+                            </td>
+                            <td width="90%" style="position: relative;">
+                                <p style="text-align: center; position: relative; margin: 4px; margin-left: -30px;">
+                                    <strong>
+                                        अखिल भारतीय आयुर्विज्ञान संस्थान
+                                        <br>
+                                        परीक्षा अनुभाग, अंसारी नगर, नई दिल्ली -११०६०८
+                                    </strong>
+                                    <br>
+
+
+                                    <strong>
+                                        ALL INDIA INSTITUTE OF MEDICAL SCIENCES
+                                        <br>
+                                        EXAMINATION SECTION, ANSARI NAGAR, NEW DELHI-110608
+                                    </strong>
+                                    <br>
+
+
+                                    <img src="./Admit Card_files/AdmitCardRightLogo.PNG" style="position: absolute; top: 7px; right: 7px;">
+                                </p>
+                                <p id="divProvisional" style="position: absolute; top: 51px; right: 37px; font-size: 14px; color: red; font-weight: bold; display: none;" hide="">*Provisional</p>
+
+                            </td>
+                        </tr>
+                    </tbody></table>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p style="text-align: center; border: 1px solid; margin: 0px; margin-top: 2px; font-size: 13px; line-height: 18px;">
+                        <u><b>EXAMINATION ADMIT CARD </b></u>
+                        <b> </b>
+                        <br>
+                        <strong style="color: #365f91;"><em style="font-size: 18px;">[Admit Card is valid only if printed with Domain IP Address, Date and Time of printing </em></strong><br>
+                        <strong style="font-size: 16px; font-weight: 900;" class="CourseName">Institute of National Importance Combined Entrance Test (INI-CET JULY 2024 Session)</strong>
+
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <table width="100%" cellspacing="0" cellpadding="0" style="border-collapse: collapse; font-size: 14px;">
+
+                        <tbody><tr>
+                            <td width="20%" valign="top" id="P1" style="display: none;">
+                                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+
+                                    <tbody><tr>
+                                        <td style="height: 133px; text-align: center;">
+
+                                            <img id="imgStudPhoto" src="./Admit Card_files/noPhoto.jpg" alt="your image" style="height: 167px; width: 140px; border-width: 0px; display: none;">
+                                        </td>
+                                    </tr>
+                                </tbody></table>
+                            </td>
+
+                            <td width="30%" valign="top" id="D1">
+                                <table width="100%" valign="top" style="line-height: 29px;">
+                                    <tbody><tr>
+                                        <td style="height: 25px; background: #d8d8d8; text-align: center">
+                                            <strong>
+                                                CANDIDATE DETAILS
+                                            </strong>
+                                        </td>
+                                    </tr>
+
+                                    <tr style="background: #fff;">
+                                        <td>
+                                            <b>Category:</b>
+                                            <span class="Category">OBC (NCL)</span>
+
+                                        </td>
+                                    </tr>
+                                    <tr style="background: #fff;">
+                                        <td>
+                                            <b>DOB:</b>
+                                            <span class="DOB">03-07-1998</span>
+
+                                        </td>
+                                    </tr>
+                                    <tr style="background: #fff;" hidden="">
+                                        <td>
+                                            <span style=" font-weight: 600;">
+                                                Exam Language:
+                                            </span>
+                                            <span style=" font-size: 17px;">English/Hindi</span>
+                                        </td>
+                                    </tr>
+                                    <tr style="background: #ddd;">
+                                        <td>
+                                            <b>Person with Disability:</b>
+                                            <span class="Disability">No</span>
+
+                                        </td>
+                                    </tr>
+                                    <tr style="background: #fff;">
+                                        <td>
+                                            <b>*ID Card:</b>
+                                            <span class="idcard">Adhar Card</span>
+
+                                        </td>
+                                    </tr>
+                                    <tr style="background: #ddd;">
+                                        <td>
+                                            <b>*ID Card No:</b>
+                                            <span class="idcardno">722259327955</span>
+                                        </td>
+                                    </tr>
+                                </tbody></table>
+                            </td>
+
+
+                            <td width="50%" valign="top">
+                                <table width="100%" border="0" cellspacing="2" cellpadding="2" style="line-height: 20px;">
+                                    <tbody><tr>
+                                        <td width="47%">
+                                            <b>Roll No:</b>
+                                            <span class="RollNo">7517873</span>
+                                        </td>
+                                        <td width="53%">
+                                            <b>Registration ID:</b>
+                                            <span class="ApplicationNo">P6211583779</span>
+                                        </td>
+                                    </tr>
+                                    <tr style="background: #d8d8d8;">
+                                        <td colspan="2">
+                                            <b>Name:</b>
+                                            <span class="Name">PREETHI M</span>
+                                        </td>
+                                    </tr>
+
+                                    
+
+                                    <tr>
+                                        <td colspan="2" style="height: 21px; background: #000000; color: #fff; text-align: center">
+                                            <strong>EXAMINATION CENTRE</strong>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2">
+                                            <b style="font-size: 19px; font-weight:600;">Center Code:</b>
+                                            <span style="font-size: 17px;" class="ExamVenue">TN0204</span>
+                                            <br>
+                                            <span style="font-size: 17px;" class="ExamAddress"><p style="margin-top:0px;">Sri Sai Ranganathan Engineering College Sri Sai Ranganathan Engineering College, REC Kalvi Nagar, Thondamuthur,REC Kalvi Nagar, Viraliyur Post, Thondamuthur via, Coimbatore, Tamil Nadu, India, 641109 </p></span>
+                                            
+
+                                            
+                                        </td>
+                                    </tr>
+
+                                </tbody></table>
+                            </td>
+                            <td width="20%" valign="top" id="P2">
+                                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+
+                                    <tbody><tr>
+                                        <td style="height: 80px; text-align: center; padding-top: 5px; font-size: 15px;">
+                                            <img id="photosV2" style="height: 167px; width: 140px; border-width: 0px;" src="data:image/png;charset=utf-8;base64,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">
+                                            
+                                        </td>
+
+                                    </tr>
+                                </tbody></table>
+                            </td>
+
+                        </tr>
+                        <tr>
+                            <td colspan="3">
+                                <table width="100%" cellspacing="0" cellpadding="0" style=" line-height: 22px;">
+                                    <tbody><tr style="background: #dbe5f1; text-align: center">
+                                        <td><strong>Date of Examination</strong> </td>
+                                        <td><strong>Reporting Time</strong></td>
+                                        <td><strong>Entry STARTS</strong></td>
+                                        <td><strong>Entry CLOSES </strong></td>
+                                        <td><strong>Examination Timing </strong></td>
+                                    </tr>
+                                    <tr style="background: #d8d8d8; text-align: center; font-size: 14px;">
+                                        <td>
+                                            <label>
+                                                <b class="DOE">Sunday, 19th MAY, 2024</b>
+                                            </label>
+
+
+                                        </td>
+                                        <td>
+                                            
+                                            <label><b class="RT">06:30 AM</b></label>
+
+                                        </td>
+                                        <td>
+                                            
+                                            <label><b class="ES">07:00 AM</b></label>
+
+                                        </td>
+                                        <td>
+                                            
+                                            <label><b class="EC">08:30 AM</b></label>
+
+                                        </td>
+                                        <td>
+                                            
+                                            <label><b class="ET">09:00 AM to 12:00 Noon</b></label>
+
+                                        </td>
+                                    </tr>
+                                </tbody></table>
+                            </td>
+                        </tr>
+                    </tbody></table>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                        <tbody><tr style="background-color: rgba(255, 228, 228, 0.2);">
+                            <td width="74%" style="font-size: 11px; padding: 0px; border: 1px solid #000;">
+                                <span style="font-weight: bold">
+
+
+                                    <ul style="line-height: 16px; margin: 5px; font-weight: 100; font-size: 12px; margin-bottom: -9px; margin-left: -12px;">
+                                        <li style=" font-weight: 600;">
+                                            <b>
+                                                Candidate must Report as per reporting time and No candidate shall be permitted to enter after the Entry Closure Time
+                                            </b>
+
+                                        </li>
+                                        <li style=" font-weight: 600;">
+                                            <b>
+                                                No candidate shall be permitted to leave the Examination Hall before the end of the examination
+
+                                            </b>
+
+                                        </li>
+                                        <li style=" margin-bottom: 14px; font-weight: 600;">
+                                            <b>
+                                                <em>
+                                                    All candidates are required to read the Instructions available with the Admit Card
+                                                </em>
+                                            </b>
+
+                                        </li>
+                                    </ul>
+                                </span>
+
+                            </td>
+                            <td width="26%" style="text-align: center; font-size: 11px; border: 1px solid #000; ">
+
+                                <img id="barcode" alt="Bar Code" style="height: 43px; width: 200px; border-width: 0px; padding: 3px;" src="./Admit Card_files/7517873.jpg">
+
+                                <br>
+                                <span style=" font-size: 12px; font-weight: 600; "> Assistant Controller (Examinations)</span>
+                            </td>
+                        </tr>
+                    </tbody></table>
+                </td>
+            </tr>
+            <tr>
+                <td style="padding: 0 10px; position: relative; font-size: 13px; line-height: 14px; background-color: rgba(255, 228, 228, 0.7); margin: 0px; vertical-align: top; border: 1px solid #000;">
+                    <p style="text-align: center; margin: 2px; font-size: 14px;">
+                        <b>DECLARATION</b>
+
+                    </p>
+
+                    <p class="decl" style="font-size:12px">
+                        I have read the Instructions that have been uploaded with the Admit Card and have understood the contents and requirements mentioned therein. I also understand that AIIMS New Delhi does not disclose question paper as per its policy framed under AIIMS Act 1956, and copying of questions and / or transmitting them in any form will be viewed as a serious form of malpractices liable for appropriate criminal proceedings. This Admit Card is issued subject to fulfillment of all eligibility requirements about the post as well as for admittance to appear in the examination.
+
+                    </p>
+
+                    <p style="float: left; margin-top: 0px; line-height: 2;">
+                        <span style="float:left;">Place:</span><br>
+                        <span style="float:left;">Date:</span>
+                    </p><p class="signature">Signature of Candidate</p>
+                        <p style="margin: 15px 48px; position: absolute; font-size: 15px;">
+                            PWBD Candidates who cannot write are requested to affix their left / right (in lieu of left) thumb impression, instead of signatures
+                        </p>
+
+
+
+
+
+                </td>
+
+            </tr>
+            <tr>
+                <td style="background: #fff; text-align: center; line-height: 33px; font-size: 17px; font-weight: 800;">
+                    IMPORTANT INSTRUCTIONS (Please read detailed instructions available separately)
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div style="float: left; width: 285px; padding: 5px; line-height: 17px; height: 20px; text-align: center">
+                        <strong>
+                            Please carry with you ONLY:
+
+                        </strong>
+                    </div>
+
+                    <div style="float: left; width: 300px; padding: 5px; line-height: 17px; height: 20px; text-align: center">
+                        <strong>
+                            Valid  Photo ID Proofs:
+
+                        </strong>
+                    </div>
+
+                    <div style="float: left; width: 240px; padding: 5px; line-height: 17px; height: 20px; text-align: center">
+                        <strong>
+                            PLEASE NOTE:
+
+                        </strong>
+                    </div>
+                    <div style="clear: both"></div>
+                    <div style="" id="divNursing">
+                        <div style="float: left; width: 285px; padding: 5px; margin-top: -14px;">
+                            <ul style="list-style-type: decimal; margin: 0px; padding: 0px; margin-left: 15px; font-size: 13px; text-align: justify; line-height: 1.1;" class="instrustionList">
+                                <li>
+                                    Admit Card that has a clear print of your uploaded photograph and your signature on above Declaration, preferably in color.
+
+                                </li>
+                                <li>
+                                    Valid Photo ID as indicated.
+                                </li>
+                                <li>
+                                    You will <b>not be allowed for examination</b> without Admit Card and valid ID Proof.
+                                </li>
+                                <li>
+                                    Biometric/IRIS capturing is mandatory for all candidates. All candidates are required to ensure that their Biometric and IRIS has been captured before leaving the examination hall.
+
+                                </li>
+                                <p style=" margin: 0;">
+                                    <b>Note:</b>Candidature  is liable to be cancelled without assigning reason  &amp; notice in case found indulge in activities like talking, moving  unexpected and unusual activities including unusual answering pattern etc at the desecration of AIIMS, New Delhi.
+
+                                </p>
+                            </ul>
+
+                        </div>
+                        <div style="float: left; width: 300px; padding: 5px; margin-top: -1px;">
+                            <ul style="list-style-type: decimal; margin: 0px; padding: 0px; margin-left: 15px; font-size: 13px; text-align: justify; line-height: 1;" class="instrustionList">
+                                <li>
+                                    Aadhaar Card / E-Aadhaar in original
+
+                                </li>
+                                <li>
+                                    Passport in original
+
+                                </li>
+                                <li>
+                                    Voters ID/ EPIC Card in original
+
+                                </li>
+                                <li>
+                                    PAN Card with photo in original
+
+                                </li>
+                                <li>
+                                    Drivers License in original
+
+
+                                </li>
+                            </ul>
+                            <span style=" margin-top:5px;">
+                                All other ID/Photocopies of IDs even if attested/scanned photo of IDs in mobile phone will NOT be considered as valid.
+
+                            </span>
+                            <p style="list-style-type: decimal; margin: 0px; padding: 0px; font-size: 13px; text-align: justify; line-height: 1.1;">
+                                <b>Note:</b> Admit card is issued provisionally based on information provided in application form without any scrutiny of eligibility criteria, category, experience etc. just to allow to appear in Examination. Candidature will be cancelled if found any discrepancy at any stage, as per published advertisement, notices on website.
+
+
+                            </p>
+                        </div>
+                        <div style="float: left; width: 285px; padding: 5px; margin-top: -9px;">
+                            <ul style="list-style-type: decimal; margin: 7px; padding: 0px; margin-left: 3px; font-size: 13px; text-align: justify; line-height: 1;" class="instrustionList">
+                                
+                                <li>
+                                    
+                                    Entry will be closed at <b class="EC">08:30 AM</b>
+
+                                </li>
+                                <li>
+                                    Shoes/footwear with <b>thick soles</b> and garments with <b>large buttons </b> are <b>NOT permitted.</b>
+                                </li>
+                                <li>
+                                    Do <b>NOT carry</b> any prohibited items with you including mobile phones, watches, electronic items etc. as mentioned in the detailed instructions and prospectus.
+
+                                </li>
+                                <li>
+                                    There is no facility for safe-keeping of ornaments/ valuables etc.
+                                </li>
+                                <li>
+                                    Any candidate found to be intoxicated with alcohol or/and drugs will not be allowed entry into examination hall/expelled from examination, if found.
+
+
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+
+
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <ul style="margin: 15px 0 0 0; padding: 0px; margin-left: 24px; font-size: 13px; text-align: justify; line-height: 13px; margin-top: -6px;" class="instrustionList">
+                        <li>
+                            <b>
+                                AIIMS reserves the right of Biometric/IRIS &amp; other methods to capture identity verification as per requirement
+
+                            </b>
+                        </li>
+                        <li>
+                            If religion/customs require you to wear particular attire/PWBD Candidates are required to report early to avail facilitation during entry
+
+                        </li>
+                        <li>
+                            Use the back of Admit card for rough work.  No Extra sheet will be provided for rough work. Please return Admit Card  at the end of examination to mark your attendance. Failure to do so may result in non-evaluation of  your answers.
+
+                        </li>
+                        <li>
+                            Exit Time from examination hall after completion of examination is subject to additional time required for Admit Card collection and other post examination activities as per applicable procedure on the day of exam. Candidates are required to prepare accordingly.
+                        </li>
+
+                    </ul>
+
+                </td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid black;">
+                    <p style="margin: 0px 0px -2px 9px;"><b>For Internal Use Only</b></p>
+                    <div style="float: left; width: 285px; padding: 5px; line-height: 6px; height: 7px; text-align: center">
+                        <strong>
+                            Control No.
+                        </strong>
+                    </div>
+
+                    <div style="float: left; width: 300px; padding: 5px; line-height: 1px; height: 20px; text-align: center">
+                        <strong style="position: relative; right: 34px; ">
+                            Computer/Seat No.
+                        </strong>
+                        <strong style="position: relative; right: 23px; ">
+                            Lab No.
+                        </strong>
+                    </div>
+
+                    <div style="float: left; width: 240px; padding: 5px; line-height: 0px; height: 30px; text-align: center">
+                        <strong>
+                            Invigilator’s Name &amp; Signature
+
+                        </strong>
+                    </div>
+                    <div style="clear: both"></div>
+                    <div style="" id="divNursing">
+                        <div style="float: left; width: 285px; padding: 5px; text-align: center; margin-top: -19px;">
+                            <label id="ControlNo" style=" width: 10rem; height: 2rem; margin-bottom: 1px; text-align: center; display: inline-grid; padding-top: 8px; background: #fff; border: 1px solid #000; ">3137057</label>
+                            
+                            <p style="margin: 4px;"><b>1</b></p>
+                            <input type="text" name="name" value="" style="width: 10rem; height: 4.5rem;">
+                        </div>
+                        <div style="float: left; width: 300px; padding: 5px; text-align: center; margin-top: -19px;">
+                            <input type="text" name="name" value="" style="width: 5rem;height: 2rem;">
+                            <input type="text" name="name" value="" style="width: 5rem;height: 2rem;">
+                            <p style="margin: 4px;"><b>2</b></p>
+                            <input type="text" name="name" value="" style="width: 10rem; height: 4.5rem;">
+                        </div>
+                        <div style="float: left; width: 240px; padding: 5px; text-align: center; margin-top: -19px;">
+                            <input type="text" name="name" value="" placeholder="1 Name of Invigilator" style="width: 10rem; height: 2rem;">
+                            <input type="text" name="name" value="" placeholder="Signature of Invigilator’s" style="width: 10rem; height: 2rem;">
+                            <input type="text" name="name" value="" placeholder="2 Name of Invigilator" style="width: 10rem; height: 2rem;">
+                            <input type="text" name="name" value="" placeholder="Signature of Invigilator’s" style="width: 10rem; height: 2rem;">
+                        </div>
+                    </div>
+
+
+                </td>
+            </tr>
+
+            <tr>
+                <td style="background: #fff; text-align: center; color: #000; height: 45px; font-size: 11px; font-weight: 700; line-height: 18px;">
+                    Check your information in Admit Card. Discrepancies, if any, must be brought to the notice of Assistant Controller of Examination immediately.
+                    <br>
+                    ENTRY IS SUBJECT TO PRODUCTION OF ORIGINAL PRINT OF ADMIT CARD WITH PROPER DETAILS, VALID ORIGINAL IDENTITY CARD.
+                </td>
+            </tr>
+        </tbody></table>
+    </div>
+
+
+    <div style="width: 745px; margin: auto; position: relative; border: 2px solid #296aab; display: none;" id="dvRejected">
+        <div class="waterImg">
+            <img src="./Admit Card_files/slot2_watermarkImage.jpg" style=" width: 110.9%; height: 1169px; background-size: cover; opacity: 0.5;">
+        </div>
+
+        <div class="print_back">
+            <input id="btnPrint1" name="button" onclick="window.print();" type="button" value="Print" class="printBtn">
+            <div style="float: right; width: 135px; margin-top: 4px;">
+                <a href="https://finalmdmsmchserver4.aiimsexams.ac.in/DashBoard" style="text-decoration: none; color: #fff; padding: 1px 4px; height: 16px; font-size: 15px;" class="printBtn">My Page </a>
+                <a href="https://finalmdmsmchserver4.aiimsexams.ac.in/Logout" style="text-decoration: none; color: #fff; padding: 1px 4px; height: 16px; font-size: 15px;" class="printBtn">Logout</a>
+            </div>
+        </div>
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+            <tbody><tr>
+                <td>
+                    <table width="100%" cellspacing="0" cellpadding="0" style="border-collapse: collapse">
+                        <tbody><tr style="background: #dbe5f1;">
+                            <td width="15%" style="text-align: center">
+                                <img src="./Admit Card_files/AdminCardLogo(1).PNG" style="height: 80px;">
+                            </td>
+                            <td width="85%">
+                                <p style="text-align: center">
+                                    <strong>
+                                        ALL INDIA INSTITUTE OF MEDICAL SCIENCES
+                                        <br>
+                                        NEW DELHI<br>
+                                        Examination Section, Ansari Nagar, New Delhi 110608
+                                    </strong><br>
+                                </p>
+                            </td>
+                        </tr>
+                    </tbody></table>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p style="text-align: center; border: 1px solid; margin: 0px; margin-top: 2px; font-size: 13px; line-height: 15px;">
+                        <u>Rejected Application</u><br>
+                        <strong class="CourseName">Institute of National Importance Combined Entrance Test (INI-CET JULY 2024 Session)</strong>
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <table width="100%" border="1" cellspacing="0" cellpadding="0" style="border-collapse: collapse; font-size: 12px;">
+
+                        <tbody><tr>
+                            <td width="60%" valign="top">
+                                <table width="100%" border="0" cellspacing="2" cellpadding="2" style="line-height: 29px;">
+                                    <tbody><tr>
+                                        <td>
+                                            <b>Registration ID.:</b>
+                                            <label id="lblRegistrationNo1"></label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <b>Name:</b>
+                                            <label id="lblName1"></label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="vAlign">
+                                            <span class="font12 b">Your Application has been rejected</span> due to following reasons.
+                                            <br>
+                                            <span style="font-weight: bold; color: red; padding-left: 5px; font-size: 12px; display: inline-block; padding-bottom: 4px;">
+                                                <label id="Duplicates"></label>
+                                            </span>
+                                            <br>
+                                            <label id="lblReas1"></label>
+                                            <br>
+                                            <label id="lblReas2"></label>
+                                            <br>
+                                            <label id="lblReas3"></label>
+                                            <br>
+                                            <label id="lblReas4"></label>
+                                            <br>
+                                            <label id="lblReas5"></label>
+                                            <br>
+                                            <label id="lblReas6"></label>
+                                            <br>
+                                            <label id="lblReas7"></label>
+                                        </td>
+                                    </tr>
+
+                                </tbody></table>
+                            </td>
+                        </tr>
+                    </tbody></table>
+                </td>
+            </tr>
+
+        </tbody></table>
+    </div>
+    <div id="divOPHPoupup" class="popupOverlay" style="display: none;">
+        <div class="OPHPoupup">
+            
+            <p style="font-size: 20px;">
+                Read Instructions Carefully before taking Print out of your Admit card
+            </p>
+            <p style="font-size: 20px;">
+                <a href="https://docs.aiimsexams.ac.in/sites/1_INSTRUCTION_ADMIT_CARD_19TH_MAY_2024.pdf" id="hrflnkpdf1" target="_blank">Click Here to Download Instructions for Admit Card</a>
+            </p>
+             
+            
+            <label style="font-size: 20px;">
+                <input type="checkbox" name="ChkReadIns" id="ChkReadIns" value="1">
+                I have read Instructions and properly gone  through the mock link of the exam as above.           </label>
+
+            <div class="text-center" style="text-align:center">
+                <button class="closeok" style="padding: 7px 28px; border: 1px solid; background: rgb(0, 147, 255); color: rgb(255, 255, 255); display: inline-block;">
+                    OK
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $.getJSON("https://api.ipify.org?format=json", function (data) {
+            // Setting text of element P with id gfg
+            $("#IpAddress").html(data.ip);
+        })
+
+
+
+    </script>
+   
+
+
+
+
+</body></html>
