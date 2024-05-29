@@ -1,0 +1,273 @@
+.borR {
+    border-right: solid 1px #999 !important;
+}
+
+.font20 {
+    font-size: 20px;
+}
+
+.font16 {
+    font-size: 16px;
+}
+
+.print_back {
+        text-align: left;
+        height: 24px;
+        overflow: hidden;
+        background-color: #296aab !important;
+        -webkit-print-color-adjust: exact;
+        
+    }
+
+.printBtn {
+    color: #fff;
+    background: #002346;
+    border: 1px solid;
+    padding: 2px 13px;
+    border-radius: 1px;
+}
+
+@media print 
+{
+    .footerPrint
+    {
+        margin-top: -50px !important;
+    }
+
+    .smallWatermartAiimsImage {
+        position: absolute;
+        top: 25%;
+        right: 5%;
+    }
+    .examcenter {
+        background: #000000 !important;
+        -webkit-print-color-adjust: exact;
+        color: #fff !important;
+    }
+    .admitcardhead {
+        background-image: url("../images/content.jpg" );
+        -webkit-print-color-adjust: exact;
+        padding: 2px;
+    }
+    .examdate {
+        background: #dbe5f1;
+        -webkit-print-color-adjust: exact;
+        text-align: center;
+    }
+    .adbgcolor {
+        -webkit-print-color-adjust: exact;
+    }
+    .printBtn {
+    color: #fff;
+    background: #002346;
+    border: 1px solid;
+    padding: 2px 13px;
+    border-radius: 1px;
+    display: none;
+}
+    
+
+    .admitcard {
+        width: 70%;
+        margin: auto;
+        background-color: rgba(0, 0, 0, 0.7) !important;
+        text-align: center;
+        -webkit-print-color-adjust: exact;
+        margin-bottom: 2px;
+        padding: 5px 5px;
+        color: #fff !important;
+    }
+
+    .bgBlack {
+        background-color: rgba(0, 0, 0, 0.7) !important;
+        -webkit-print-color-adjust: exact;
+        color: #fff !important;
+    }
+
+    .hallTicket {
+        background-color: #000 !important;
+        -webkit-print-color-adjust: exact;
+        height: 26px;
+        line-height: 26px;
+        color: #fff;
+        margin: 0px;
+        padding-left: 5px;
+    }
+
+    .noprint {
+        display: none;
+    }
+
+    .iheading {
+        background-color: rgba(0, 0, 0, 0.7) !important;
+        -webkit-print-color-adjust: exact;
+        padding: 2px;
+        color: #fff;
+        margin-bottom: 1px;
+    }
+}
+
+.hallTicket {
+    background-color: #000 !important;
+    height: 32px;
+    line-height: 32px;
+    color: #fff;
+    margin: 0px;
+    padding-left: 5px;
+}
+
+.admitcard {
+    width: 70%;
+    margin: auto;
+    background-color: rgba(0, 0, 0, 0.7) !important;
+    text-align: center;
+    -webkit-print-color-adjust: exact;
+    margin-bottom: 2px;
+    padding: 5px 5px;
+    color: #fff;
+}
+
+.slMain2 {
+    position: relative;
+}
+
+.slLogo {
+    position: relative;
+}
+
+    .slLogo img {
+        position: absolute;
+        top: 6px;
+        left: 3px;
+    }
+
+    .slLogo div {
+        width: 72%;
+        margin: auto;
+        text-align: center;
+    }
+
+.font16 {
+    font-size: 16px;
+}
+
+.waterImg {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    z-index: -1;
+}
+
+.bgBlack {
+    background: rgba(0, 0, 0, 0.7);
+    color: #fff;
+}
+
+.right_smallWatermartAiimsImage {
+    position: absolute;
+    top: 23%;
+    right: 15%;
+}
+
+    .right_smallWatermartAiimsImage img {
+        height: 78px;
+    }
+
+.right_WatermartImage2016 {
+    position: absolute;
+    top: 26%;
+    right: 18%;
+    z-index: 0;
+    /*opacity: 0.5;*/
+ }
+
+
+.left_smallWatermartAiimsImage {
+    position: absolute;
+    top:20%;
+    left:13%;
+    /* z-index: -1; */
+    opacity: 1.5;
+}
+
+
+.left_smallWatermartAiimsImage img {
+        height: 98px;
+    }
+
+.left_WatermartImage2016 {
+       position: absolute;
+    top: 27%;
+    left: 17%;
+   opacity: 0.6;
+ }
+
+
+
+    .WatermartImage215 img 
+	{
+        height: 73px;
+    }
+
+.table {
+    border: none !important;
+}
+
+.iheading {
+    background-color: rgba(0, 0, 0, 0.7) !important;
+    -webkit-print-color-adjust: exact;
+    padding: 2px;
+    color: #fff;
+    margin-bottom: 1px;
+}
+
+.instruction {
+}
+
+    .instruction li {
+        margin-bottom: 5px;
+    }
+
+
+.instrustionList {
+
+
+}
+
+.instrustionList li {
+    margin-bottom:2px;
+
+}
+
+.yearsImage {
+
+
+}
+
+
+.stamp-box {
+    position: absolute;
+    bottom: 14px;
+    right: 11px;
+    width: 163px;
+    height: 78px;
+    border: 1px dashed #5d5b5b;
+    float: left;
+}
+
+
+.signature {
+    position: absolute;
+    bottom: 0px;
+    left: 103px;
+    font-size: 12px;
+    border-top: 1px solid #3a3a3a;
+    padding-top: 20px;
+    width: 235px;
+    text-align: center;}
+
+
+
+.space {
+        margin-right:90px;
+}

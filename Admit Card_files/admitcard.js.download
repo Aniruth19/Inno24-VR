@@ -1,0 +1,188 @@
+﻿$(document).ready(function () {
+    //jAlert("Admit Card has been temporarily Suspended.It will resume soon1.");
+    //return false;
+    $("#dvAccepted,#dvRejected").hide();
+    $(".closeok").hide();
+    $("body").transit();
+    fnLoadAdmitCard();
+
+    $(".close").click(function () {
+        $(".popupOverlay").hide();
+    });
+
+
+    
+
+    $('#ChkReadIns').change(function () {
+        if ($(this).is(':checked')) {
+            this.checked = confirm("Are you sure?");
+            $(".closeok").show();
+        }
+        else {
+            $(".closeok").hide();
+        }
+
+    });
+     
+
+    $(".closeok").click(function () {
+        $(".popupOverlay").hide();
+        fnCloseokAdmitCard();
+    });
+});
+
+function fnCloseokAdmitCard() {
+    overlay_disable("bWrapper", "divDisabled");
+    var sNId = $("#hdnSId").val() != "0" ? $("#hdnSId").val() : "";
+    $.post(appPath + "/AdmitCard/CloseokAdmitCard", { sId: sNId }, function (result) {
+        //$.post(appPath + "/AdmitCard/GetAdmitCard", function (result) {
+        if (result == "noRecord")
+            jAlert("Admit card not generated.");
+        // jAlert("Admit Card has been temporarily Suspended.It will resume soon.");
+        else if (result == "error")
+            jAlert("Your action could not be completed due to an exception.");
+        //else
+        //    fnAdmitCard(result);
+
+        overlay_enabled("divDisabled");
+    });
+
+    overlay_enabled("divDisabled");
+}
+function fnLoadAdmitCard() {
+    overlay_disable("bWrapper", "divDisabled");
+    var sNId = $("#hdnSId").val() != "0" ? $("#hdnSId").val() : "";
+    $.post(appPath + "/AdmitCard/GetAdmitCard", { sId: sNId }, function (result) {
+        //$.post(appPath + "/AdmitCard/GetAdmitCard", function (result) {
+        if (result == "noRecord")
+            jAlert("Admit card not generated.");
+        // jAlert("Admit Card has been temporarily Suspended.It will resume soon.");
+        else if (result == "error")
+            jAlert("Your action could not be completed due to an exception.");
+        else
+            fnAdmitCard(result);
+
+        overlay_enabled("divDisabled");
+    });
+
+    overlay_enabled("divDisabled");
+}
+
+function fnAdmitCard(data) {
+    debugger;
+    var stJson = data.stuDetails != null && data.stuDetails != "noData" ? $.parseJSON(data.stuDetails)[0] : null;
+    var stJson1 = data.examDetails != null && data.examDetails != "noData" ? $.parseJSON(data.examDetails)[0] : null;
+
+
+    debugger
+    if (stJson != null) {
+        $("#dvAccepted").show();
+        $("#dvRejected").hide();
+        var rStatus = stJson.AP != null ? stJson.AP.toUpperCase() : null;
+        if (rStatus != "" && (stJson.AP == "Accepted" || stJson.AP == "Provisional")) {
+            debugger;
+
+
+            $("#lblIPAddressNur").text(data.IpAdd);
+            $("#lblDateNur").text(data.currDate);
+            $("#lblTimeNur").text(data.currTime);
+
+            if (stJson.AP == "Provisional") {
+                $("#divProvisional").show();
+            }
+            else {
+                $("#divProvisional").hide();
+            }
+
+            $(".RollNo").text(stJson.RollNo);
+            $(".ApplicationNo").text(stJson.ApplicationNo);
+            $(".Name").text(stJson.ApplicantName);
+            $(".CourseName").text(stJson.CourseName);
+
+            $(".Category").text(stJson.Category);
+            $(".DOB").text(stJson.DOB);
+            $(".post").text(stJson.AppliedCourse); //Junior Photographer
+            $(".Disability").text(stJson.IsOPH);
+            //$(".ExamVenue").text(stJson.COURSEA);
+            $(".ExamVenue").text(stJson.CentreCode);
+            $(".ExamAddress").text(stJson.CentreAddress);
+            $(".idcard").text(stJson.IDProofType);
+            $(".idcardno").text(stJson.IDNo);
+            $(".ExamShift").text(stJson.Shift);
+            $(".DOE").text(stJson.ExamDate);
+            $(".RT").text(stJson.ReportCenter);
+            $(".ES").text(stJson.EntryStart);
+            $(".EC").text(stJson.EntryCloses);
+            $(".ET").text(stJson.ExamTime);
+            $("#ControlNo").text(stJson.ControlNo);
+
+
+            $('#P2,#D1,#DivDisipline1,#dvAcceptedBSCNursing').show();
+            //if (stJson.AP == "Duplicate") {
+            //    $('#divProvisional').show();
+            //}
+            var slot = stJson.Shift != "" ? stJson.Shift.toUpperCase() : "";
+
+            if ((slot != "" && stJson.Photo != null)) {
+                if (stJson.Photo != null)
+                    $('#photosV2').attr('src', 'data:image/png;charset=utf-8;base64,' + stJson.Photo + '');
+
+                //if (stJson.barcode != null)
+                //    $('#imgBarCodeNur12').attr('src', 'data:image/png;charset=utf-8;base64,' + stJson.barcode + '');
+                $('#barcode').attr('src', appPath + '/Barcode/' + stJson.RollNo + '.jpg');
+
+                $('#imgWatermark').attr('src', appPath + '/Images/img/slot1_watermarkImage.jpg');
+                $('#imgSlot').attr('src', appPath + '/Images/img/2019_new_image.png');
+
+
+                $('#imgStudPhoto22,#lblCenterAddressNur,#lblCenterAddressLabelNur,#imgStudPhotoNur,#lblCenterCodeNur').show();
+                $('#imgStudPhoto,#lblCenterAddress1,#lblCenterAddressLabelNur').hide();
+            }
+            else {
+                debugger
+                if (stJson.Photo != null)
+                    $('#photosV2').attr('src', 'data:image/png;charset=utf-8;base64,' + stJson.Photo + '');
+
+
+                $('#imgWatermark').attr('src', appPath + '/Images/img/slot1_watermarkImage.jpg');
+                $('#imgSlot').attr('src', appPath + '/Images/img/2019_new_image.png');
+                $('#barcode').attr('src', appPath + '/Barcode/' + stJson.RollNo + '.jpg');
+                $("#lblCenterCodeLabel").html("<b>HALL TICKET NO.:</b>");
+                $("#lblHallTicketNoLabel").html("<b>CENTRE CODE:</b>");
+                $("#lblCenterAddressLabel1").html("<p style='margin-top:5px;'><b>CENTRE ADDRESS:</b></p>");
+
+
+                $(".ExamVenue").text(stJson.CentreCode);
+
+                $(".ExamAddress").html("<p style='margin-top:0px;'>" + stJson.CentreAddress + "</p>");
+                /* $("#dvImg2016").removeClass("left_WatermartImage2016 right_WatermartImage2016").addClass("left_WatermartImage2016");*/
+                //$("#dvImgWatermart").removeClass("left_smallWatermartAiimsImage right_smallWatermartAiimsImage").addClass("left_smallWatermartAiimsImage");
+                $('#imgStudPhoto,#lblCenterAddress1,#lblCenterAddressLabel1').show();
+                $('#imgStudPhoto,#lblCenterAddress,#lblCenterAddressLabel').hide();
+            }
+
+            $("#dvAccepted").show();
+            $("#dvRejected").hide();
+        }
+        else {
+            debugger;
+            $(".CourseName").text(stJson.CourseName);
+            // $("#lblCourseNameReg").text(stJson.CourseName); 
+            $("#lblRegistrationNo1").text(stJson.RegistrationNo);
+            $("#lblName1").text(stJson.ApplicantName);
+            $(".ExamShift").text(stJson.Shift);
+            if (stJson.AP == "Duplicate") {
+                $("#Duplicates").html("Duplicate Application Form.");
+                $("#lblReas1").text('');
+            }
+            else {
+                $("#lblReas1").text(stJson1.Reasons);
+            }
+
+           
+            $("#dvAccepted").hide();
+            $("#dvRejected").show();
+        }
+    }
+
+}
